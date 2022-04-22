@@ -109,29 +109,16 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     }
     else // Caso 1 hijo
     {
+        TreeNode *child;
+        if(node->left) child = node->left;
+        else child = node->right;
+
         if(tree->lower_than(node, node->parent))
-            if(node->left)
-            {
-                node->parent->left = node->left;
-                node->left->parent = node->parent;
-            }
-            else
-            {
-                node->parent->left = node->right;
-                node->right->parent = node->parent;
-            }
+            node->parent->left = child;
         else
-        {
-            if(node->left) {
-                node->parent->right = node->left;
-                node->left->parent = node->parent;
-            }
-            else
-            {
-                node->parent->right = node->right;
-                node->right->parent = node->parent;
-            }
-        }
+            node->parent->right = child;
+            
+        child->parent = node->parent;
         free(node);
     }
 }
