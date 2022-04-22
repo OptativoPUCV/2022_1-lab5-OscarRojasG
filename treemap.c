@@ -50,7 +50,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     if(tree == NULL) return;
 
     TreeNode *aux = tree->root;
-    while(1)
+    while(aux)
     {
         if(is_equal(tree, key, aux->pair->key))
             return;
