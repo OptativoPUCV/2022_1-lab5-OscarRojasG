@@ -110,6 +110,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     else // Caso 1 hijo
     {
         if(tree->lower_than(node, node->parent))
+        {
             if(node->left)
             {
                 node->parent->left = node->left;
@@ -120,7 +121,9 @@ void removeNode(TreeMap * tree, TreeNode* node) {
                 node->parent->left = node->right;
                 node->right->parent = node->parent;
             }
+        }
         else
+        {
             if(node->left)
             {
                 node->parent->right = node->left;
@@ -131,6 +134,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
                 node->parent->right = node->right;
                 node->right->parent = node->parent;
             }
+        }
         free(node);
     }
 }
