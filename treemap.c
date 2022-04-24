@@ -94,7 +94,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
 
     if(node->left == NULL && node->right == NULL) // Caso sin hijos
     {
-        if(tree->lower_than(node, node->parent))
+        if(node->parent->left == node)
             node->parent->left = NULL;
         else
             node->parent->right = NULL;
