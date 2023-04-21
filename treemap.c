@@ -115,7 +115,6 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     }
 
     if (node->right != NULL) {
-        printf("1");
         if (parent != NULL) {
             if (tree->lower_than(node->pair->key, parent->pair->key)) {
                 parent->left = node->right;
@@ -176,7 +175,11 @@ Pair * upperBound(TreeMap * tree, void* key) {
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
-    return NULL;
+    if (tree->root == NULL) return NULL;
+    TreeNode *node = minimum(tree->root);
+    tree->current = node;
+
+    return node->pair;
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
