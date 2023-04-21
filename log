@@ -61,3 +61,9 @@ vie., 21 de abr. de 2023  3:42:12:
  1 file changed, 4 insertions(+), 1 deletion(-)
  tests:  0|0
 693a404
+vie., 21 de abr. de 2023  3:43:07: 
+ treemap.c | 9 +++------
+ 1 file changed, 3 insertions(+), 6 deletions(-)
+ tests:  18|3
+total_score: 40/70
+48f5018
