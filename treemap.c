@@ -99,17 +99,20 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     }
 
     if (node->left != NULL) {
-        printf("2");
         if (parent != NULL) {
             if (tree->lower_than(node->pair->key, parent->pair->key)) {
+                printf("a");
                 parent->left = node->left;
             }
             else {
+                printf("b");
                 parent->right = node->left;
             }
             node->left->parent = parent;
+            printf("c");
         } else {
             tree->root = node->left;
+            printf("d");
         }
     }
 
