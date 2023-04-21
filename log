@@ -73,3 +73,9 @@ vie., 21 de abr. de 2023  3:45:11:
  tests:  20|2
 total_score: 45/70
 470bb5c
+vie., 21 de abr. de 2023  8:32:54: 
+ treemap.c | 23 ++++++++++++++++++++++-
+ 1 file changed, 22 insertions(+), 1 deletion(-)
+ tests:  21|2
+total_score: 50/70
+af71c37
